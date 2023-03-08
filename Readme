@@ -1,0 +1,56 @@
+Expliquer en quelques phrases (README):
+   Comment il est construit ?
+   Comment faire fonctionner le projet ?
+   Comment tu envisages la partie hébergement ?
+   Comment tu vois une éventuelle montée en charge du système ?
+   Ses forces, faiblesses, NEXT STEPS pour la mise en prod.
+
+
+- Comment il est construit ?
+
+Pour concevoir ce projet, j'ai opté pour le framework Django car il est conçu pour sa faciliter le développement, la sécurité, la scalabilité, et plusieurs autres raisons.
+
+Le projet est organisé en plusieurs répertoires qui contiennent les fichiers nécessaires pour fournir différentes fonctionnalités à l'application. Les fichiers de configuration principaux, tels que settings.py qui gère les paramètres et urls.py qui gère le routage, se trouvent dans le dossier principal du projet (Ici OMDB). De plus on a le fichier views.py du répertoire projet qui contient les fonctions qui traitent les requêtes entrantes et renvoient les réponses correspondantes. 
+
+
+
+
+- Comment faire fonctionner le projet ?
+
+Pour lancer le projet, il faut se déplacer dans le répertoire du projet et lancer les deux commandes suivantes dans le terminale:
+
+cd OMDB
+python manage.py runserver
+
+
+
+
+
+- Comment tu envisages la partie hébergement ?
+
+Pour ma part et en effectuant quelques recherches, je recommanderais un hébergement sur une plateforme cloud, telle que Google Cloud Platform, Amazon Web Services ou Microsoft Azure, qui offre une sécurité de haut niveau et des fonctionnalités de sécurité avancées. J'ai fait ce choix car je pense qu'il est mieux pour une entreprise qui fait notamment du B2B et du B2B2C d'avoir un site web bien sécurisé.
+
+
+
+
+
+- Comment tu vois une éventuelle montée en charge du système ?
+
+Selon moi pour palier la montée en charge du système il faut faire évoluer l'application Django en y ajoutant plus de ressources, plutôt que de simplement augmenter la capacité des ressources existantes. Cette méthode permet d'augmenter facilement la capacité de l'application en fonction des besoins, ce qui permet de mieux s'adapter à l'évolution des besoins de l'entreprise. Dans cette optique le service le plus recommandé selon mes recherches est Docker car dans le cas d'une montée en charge du système, Docker est une solution appropriée car il permet de réduire les temps de déploiement et d'améliorer la portabilité de l'application, ainsi gérer plus efficacement la mise à l'échelle de l'application en fonction de la charge.
+
+
+
+
+- Ses forces, faiblesses, NEXT STEPS pour la mise en prod.
+
+Forces: Django est un framework abordable avec une très bonne documentation ce qui permet de pouvoir bien l'utiliser même un débutant. J'ai aussi découvert à travers des recherches que Django est conçu pour gérer de grandes applications web, ce qui le rend idéal pour un backend OMDB qui devra gérer un grand nombre de requêtes.
+
+Faiblesses: Certaines configurations de Django peuvent nécessiter une expertise technique plus avancée pour les implémenter correctement. De plus sa bibliothèque est complète: ce qui entraîne une surcharge de fonctionnalités inutiles pour une application simple.
+
+Quelques étapes pour la mise en production (liste non exhaustive):
+
+Déploiement de l'application et donc accessible à partir d'internet.
+Configuration de la base de données (si utilisation locale).
+Configuration des paramètres de sécurité.
+Tests et débogage.
+Surveillance et maintenance.
